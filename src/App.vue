@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" class="flex-container">
     <toolbar></toolbar>
     <note-list></note-list>
     <editor></editor>

@@ -1,9 +1,11 @@
 <template>
-  <div id="toolbar">
-    <i @click="addNote" class="fa fa-plus"></i>
-    <i @click="toggleFavNote" class="fa fa-star-o"
+  <div id="toolbar" class="toolbar">
+    <i @click="addNote" class="fa fa-plus fa-2x toolbar-btn"></i>
+    <br/>
+    <i @click="toggleFavNote" class="fa fa-star-o fa-2x toolbar-btn"
         :class="{ starred: activeNote.favorite }"></i>
-    <i @click="deleteNote" class="fa fa-close"></i>
+    <br/>
+    <i @click="deleteNote" class="fa fa-close fa-2x toolbar-btn"></i>
   </div>
 </template>
 

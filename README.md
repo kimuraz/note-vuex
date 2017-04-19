@@ -1,4 +1,4 @@
-# note-vuex-tutorial
+# note-vuex
 
 > A Vue.js project
 

@@ -1,7 +1,7 @@
 <template>
   <div>
     <ul v-for="note in notes">
-      <li @click="setActiveNote" value="note">{{ note.title }}</li>
+      <li @click="setActiveNote(note)">{{ note.title }}</li>
     </ul>
   </div>
 </template>

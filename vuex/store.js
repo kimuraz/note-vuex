@@ -28,8 +28,12 @@ export default new Vuex.Store({
     },
 
     DELETE_NOTE(state){
-        state.notes.remove(state.activeNote);
+      const idx = state.notes.indexOf(state.activeNote);
+      if(idx !== -1) {
+        state.notes.splice(idx, 1);
         state.activeNote = state.notes[0];
+      }
+
     },
 
     TOGGLE_FAVORITE(state){
@@ -53,8 +57,8 @@ export default new Vuex.Store({
     editNoteText({ commit }, t ) {
       commit('EDIT_NOTE_TEXT', t);
     },
-    deleteNote({ commit }, note ) {
-      commit('DELETE_NOTE', note);
+    deleteNote({ commit }) {
+      commit('DELETE_NOTE');
     },
     toggleFavNote({ commit }) {
       commit('TOGGLE_FAVORITE');
