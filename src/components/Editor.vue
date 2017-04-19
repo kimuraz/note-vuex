@@ -1,11 +1,11 @@
 <template>
-  <div>
-    <input type="text"
+  <div class="editor">
+    <input type="text" class="title" placeholder="Title"
         :value="activeNoteTitle"
-        @input="editNoteTitle">
+        @input="editNoteTitle" :disabled="notes.length === 0">
     </input>
-    <textarea :value="activeNoteText"
-        @input="editNoteText">
+    <textarea :value="activeNoteText" class="text" placeholder="Text"
+        @input="editNoteText" :disabled="notes.length === 0">
     </textarea>
   </div>
 </template>
@@ -27,6 +27,9 @@ export default {
     },
     activeNoteText() {
       return this.$store.getters.activeNoteText;
+    },
+    notes() {
+      return this.$store.getters.notes;
     },
   },
 };

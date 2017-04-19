@@ -43,6 +43,7 @@ export default new Vuex.Store({
     SET_ACTIVE_NOTE(state, note){
       state.activeNote = note;
     },
+
   },
   actions: {
     addNote({ commit }) {
